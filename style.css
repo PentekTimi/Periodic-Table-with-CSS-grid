@@ -1,0 +1,129 @@
+/* get rid of any margins and set box sizing to border box */
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* Set the background color of the page, align text to the center and add a margin */
+body {
+    background-color: darkcyan;
+    text-align: center;
+    margin: 5em;
+}
+
+/* Do not display the image initially */
+.image {
+    display: none;
+}
+
+/* set the h1 tag text color to light grey */
+h1 {
+    color: rgb(235, 231, 231);
+}
+
+/* create a grid with 18 columns and 10 rows, each taking up the same space. Add a small gap between the cells */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-gap: 0.15em;
+}
+
+/* add spacing/padding around the element details */
+.element {
+    padding: 0.2em;
+}
+
+/* Change the font size for the number, symbol, name, and weight of the element */
+.element-number {
+    font-size:0.75em;
+}
+.element-symbol {
+    font-size: 1.75em;
+}
+.element-name {
+    font-size: 0.85em;
+}
+.element-weight {
+    font-size: 0.8em;
+}
+
+/* add the empty spaces on row 1, 2, 3, 6, 7, 9, 10 */
+/* Example: in row one: start at row 1 and column 2. Span only for one row but span for 16 columns */
+.empty-row1 {
+    grid-area: 1 / 2 / span 1 / span 16;
+}
+
+.empty-row2-row3 {
+    grid-area: 2 / 3 / span 2 / span 10;
+}
+
+.empty-row8{
+    grid-area: 8 / 1 / span 1 / span 18;
+}
+
+.empty-row6-row7 {
+    grid-area: 6 / 3 / span 2 / span 1;
+}
+
+.empty-row9-row10 {
+    grid-area: 9 / 1 / span 2 /span 3;
+}
+
+
+/* Change the BG color for different type of elements */
+.noble {
+    background-color: #FFFFFF;
+}
+
+.alkali {
+    background-color: #CCF7F6;
+}
+
+.alkaline {
+    background-color: #FFC8C8;
+}
+
+.semimetal {
+    background-color: #FBFBBC;
+}
+
+.nonmetal {
+    background-color: #FFD5ED;
+}
+
+.halogen {
+    background-color: #CFFCD1;
+}
+
+.basic {
+    background-color: #F0F1F1;
+}
+
+.transition {
+    background-color: #E4EFFF;
+}
+
+.lanthanide {
+    background-color: #EBDDF8;
+}
+
+.actinide {
+    background-color: #FFE8D6;
+}
+
+
+/* Once the width of the viewport is less than 1500px, don´t display the grid anymore */
+@media (max-width: 1500px) {
+    .grid-container {
+        display: none;
+    }
+    /* display the image instead, center the image, and make it change its size as the viewport size changes */
+    .image {
+        display:block;
+        margin: 0 auto;
+        width: 100%;
+        height: auto;
+        margin-top: 2em;
+    }
+}
